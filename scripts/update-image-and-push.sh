@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Variables
-FILE="playground-deployment.yaml"
+FILE="../manifest-files/playground-deployment.yaml"
 NEW_IMAGE="wil42/playground:v2"
 GIT_MESSAGE="Update image version to $NEW_IMAGE in deployment"
 
