@@ -2,7 +2,9 @@
 
 # Variables
 FILE="../manifest-files/playground-deployment.yaml"
-NEW_IMAGE="wil42/playground:v2"
+V1="v1"
+V2="v2"
+NEW_IMAGE="wil42/playground:$V1"
 GIT_MESSAGE="Update image version to $NEW_IMAGE in deployment"
 
 # Check if the file exists
