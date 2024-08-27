@@ -15,7 +15,7 @@ fi
 
 # Update the image version in the YAML file
 cd ../manifest-files
-sed -i "s|image: wil42/playground:v1|image: $NEW_IMAGE|" "$FILE"
+sed -i "s|image: wil42/playground:$V2|image: $NEW_IMAGE|" "$FILE"
 
 # Check if sed command was successful
 if [ $? -ne 0 ]; then
@@ -35,3 +35,6 @@ if [ $? -ne 0 ]; then
 fi
 
 echo "Image version updated and changes pushed to repository successfully."
+#forward the port
+sleep 1m
+kubectl port-forward -n dev svc/playground-service 8888:80 &
