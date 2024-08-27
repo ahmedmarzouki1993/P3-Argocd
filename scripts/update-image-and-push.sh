@@ -12,6 +12,7 @@ if [ ! -f "$FILE" ]; then
 fi
 
 # Update the image version in the YAML file
+cd ../manifest-files
 sed -i "s|image: wil42/playground:v1|image: $NEW_IMAGE|" "$FILE"
 
 # Check if sed command was successful
@@ -23,7 +24,7 @@ fi
 # Commit and push the changes to the repository
 git add "$FILE"
 git commit -m "$GIT_MESSAGE"
-git push
+git push origin main
 
 # Check if git commands were successful
 if [ $? -ne 0 ]; then
