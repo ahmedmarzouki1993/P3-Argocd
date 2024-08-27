@@ -1,0 +1,14 @@
+# make port forwarding like we use Cluster Ip  instead of NodePort :
+
+kubectl port-forward -n dev svc/playground-service 8888:80 &
+
+#to viewing the job
+
+jobs
+
+#to kill jobs : bring it to foreground
+fg <job-number>: fg 1
+
+#stop the job 
+kill 1 
+
